@@ -1,0 +1,99 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container {
+  height: 95%;
+  width: 95%;
+
+  display: grid;
+  grid-template-areas:
+    ". head ."
+    "nav nav nav"
+    "tar tar tar"
+    "tar tar tar"
+    "tar tar tar";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.title-container {
+  grid-area: head;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.nav-container {
+  grid-area: nav;
+}
+.hero-nav {
+  height: 50%;
+  width: 100%;
+}
+.title-descrp {
+  height: 50%;
+  width: 100%;
+  background-color: hsla(0, 0%, 16%, 1);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas: "nombre dni direccion telefono correo accion";
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+p{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+button {
+  background-color: hsla(160, 100%, 25%, 1);
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  border-radius: 3px;
+  margin: 2px;
+}
+input {
+  margin: 2px;
+}
+.content-main {
+  grid-area: tar;
+  height: 100%;
+  width: 100%;
+}
+.data-container {
+  height: 20%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas: "nombre dni direccion telefono correo accion";
+  text-align: center;
+}
+.action-btn-container {
+  grid-area: accion;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.action-btn {
+  height: fit-content;
+  width: fit-content;
+}
