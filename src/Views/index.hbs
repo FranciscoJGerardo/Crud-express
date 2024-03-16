@@ -1,12 +1,41 @@
 <div class="main-container">
+  <div class="create-card">
+
+    
+    <div class="card-title">
+      <h1>Agregar Usuario</h1>
+    </div>
+    <div class="forms-container">
+        <form action="">
+          <label for="nombre">Nombre</label><input type="text" placeholder="Nombre">
+          
+          <label for="dni">DNI</label><input type="text" placeholder="DNI">
+          
+          <label for="direccion">Direccion</label> <input type="text" placeholder="Direccion">
+
+          <label for="telefono">Telefono</label> <input type="text" placeholder="Telefono">
+
+          <label for="correo">Correo</label> <input type="text" placeholder="Correo">
+
+          <button style="margin-top: 10px;">enviar</button>
+
+        </form>
+    </div>
+
+
+
+  </div>
+
+
+
+
   <div class="title-container">
     <h1>Lista de usuarios</h1>
   </div>
 
   <div class="nav-container">
     <nav class="hero-nav">
-      <button>Inicio</button>
-      <button>Crear usuario</button>
+      <button onclick="showContainer()" id="crear">Crear usuario</button>
       <button>Buscar</button>
       <input type="text" placeholder="Ingresar DNI de usuario" />
     </nav>
@@ -28,11 +57,12 @@
         <p>{{telefono}}</p>
         <p>{{correo}}</p>
       <div class="action-btn-container">
-        <button class="action-btn">ver</button>
         <button class="action-btn">modify</button>
         <button class="action-btn">delete</button>
       </div>
     </div>
     {{/each}}
   </main>
+
+  <script src="/javascript/control.js"></script>
 </div>

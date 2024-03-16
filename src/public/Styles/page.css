@@ -97,3 +97,42 @@ input {
   height: fit-content;
   width: fit-content;
 }
+.create-card{
+  height: 60%;
+  width: 40%;
+  position: absolute;
+  left: 30%;
+  top:20% ;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.card-title{
+  width: 100%;
+  color: white;
+  background-color: hsla(0, 0%, 16%, 1); 
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  position: absolute;
+}
+.forms-container{
+  margin-top: 13%;
+  height: 80%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  }
