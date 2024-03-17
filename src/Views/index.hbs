@@ -1,33 +1,38 @@
 <div class="main-container">
   <div class="create-card">
 
-    
     <div class="card-title">
       <h1>Agregar Usuario</h1>
     </div>
     <div class="forms-container">
-        <form action="">
-          <label for="nombre">Nombre</label><input type="text" placeholder="Nombre">
-          
-          <label for="dni">DNI</label><input type="text" placeholder="DNI">
-          
-          <label for="direccion">Direccion</label> <input type="text" placeholder="Direccion">
+      <form action="" method="post">
+        <label for="nombre">Nombre</label><input
+          name="nombre"
+          type="text"
+          placeholder="Nombre"
+        />
 
-          <label for="telefono">Telefono</label> <input type="text" placeholder="Telefono">
+        <label for="dni">DNI</label><input
+          name="dni"
+          type="text"
+          placeholder="DNI"
+        />
 
-          <label for="correo">Correo</label> <input type="text" placeholder="Correo">
+        <label for="direccion">Direccion</label>
+        <input name="direccion" type="text" placeholder="Direccion" />
 
-          <button style="margin-top: 10px;">enviar</button>
+        <label for="telefono">Telefono</label>
+        <input name="telefono" type="text" placeholder="Telefono" />
 
-        </form>
+        <label for="correo">Correo</label>
+        <input name="correo" type="text" placeholder="Correo" />
+
+        <button style="margin-top: 10px;">enviar</button>
+
+      </form>
     </div>
 
-
-
   </div>
-
-
-
 
   <div class="title-container">
     <h1>Lista de usuarios</h1>
@@ -35,8 +40,8 @@
 
   <div class="nav-container">
     <nav class="hero-nav">
-      <button onclick="showContainer()" id="crear">Crear usuario</button>
-      <button>Buscar</button>
+      <button class="btn" onclick="showContainer()" id="crear">Crear usuario</button>
+      <button class="btn">Buscar</button>
       <input type="text" placeholder="Ingresar DNI de usuario" />
     </nav>
     <div class="title-descrp">
@@ -49,20 +54,22 @@
     </div>
   </div>
   <main class="content-main">
-    {{#each rows }}
-    <div class="data-container">
-      <p>{{nombre}} </p>
+    {{#each rows}}
+      <div class="data-container">
+        <p>{{nombre}} </p>
         <p>{{dni}}</p>
         <p>{{direccion}}</p>
         <p>{{telefono}}</p>
         <p>{{correo}}</p>
-      <div class="action-btn-container">
-        <button class="action-btn">modify</button>
-        <button class="action-btn">delete</button>
+        <div class="action-btn-container">
+          <a class="btn" href="#">modify</a>
+          <a class="btn" href="/delete/{{id}}">delete</a>
+        </div>
       </div>
-    </div>
     {{/each}}
   </main>
 
   <script src="/javascript/control.js"></script>
+  
+
 </div>

@@ -4,6 +4,9 @@ import router from "./Routes/index.routes.js";
 import path from 'path';
 import { __dirname } from "./path.js";
 import { engine } from "express-handlebars";
+import bodyParser from "body-parser";
+
+
 
 const app = express();
 
@@ -12,6 +15,10 @@ const app = express();
 //middlewares 
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(bodyParser.urlencoded({
+    extended:true
+}));
+app.use(bodyParser.json());
 //static
 app.use(express.static(path.join(__dirname,'public')));
 //engine

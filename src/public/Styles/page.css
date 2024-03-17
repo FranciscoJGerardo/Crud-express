@@ -53,19 +53,61 @@ body {
   font-weight: 300;
   font-style: italic;
 }
-p{
+p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-button {
-  background-color: hsla(160, 100%, 25%, 1);
-  color: white;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  border-radius: 3px;
-  margin: 2px;
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px 10px;
+  margin: 5px;
+  border: 1px solid #006d48;
+  border-radius: 8px;
+  background: #00cd88;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#00cd88),
+    to(#006d48)
+  );
+  background: -moz-linear-gradient(top, #00cd88, #006d48);
+  background: linear-gradient(to bottom, #00cd88, #006d48);
+  font: normal normal bold 16px arial;
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-delete:hover,
+.btn-delete:focus {
+  border: 1px solid #008055;
+  background: #00f6a3;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#00f6a3),
+    to(#008356)
+  );
+  background: -moz-linear-gradient(top, #00f6a3, #008356);
+  background: linear-gradient(to bottom, #00f6a3, #008356);
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-delete:active {
+  background: #006d48;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#006d48),
+    to(#006d48)
+  );
+  background: -moz-linear-gradient(top, #006d48, #006d48);
+  background: linear-gradient(to bottom, #006d48, #006d48);
 }
 input {
   margin: 2px;
@@ -97,42 +139,41 @@ input {
   height: fit-content;
   width: fit-content;
 }
-.create-card{
+.create-card {
   height: 60%;
   width: 40%;
   position: absolute;
   left: 30%;
-  top:20% ;
+  top: 20%;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   visibility: hidden;
 }
 
-.card-title{
+.card-title {
   width: 100%;
   color: white;
-  background-color: hsla(0, 0%, 16%, 1); 
+  background-color: hsla(0, 0%, 16%, 1);
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-style: normal;
   position: absolute;
 }
-.forms-container{
+.forms-container {
   margin-top: 13%;
-  height: 80%;
+  height: 100%;
   width: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-} 
+}
 
-
-form{
+form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  }
+}
