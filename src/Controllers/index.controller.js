@@ -25,9 +25,31 @@ export const deleteUser = async (req, res) => {
   res.redirect("/tareas");
 };
 
-export const updateUser = async (req, res) => {};
+export const updateUser = async (req, res) => {
+  const { id } = req.params;
+  const { nombre, dni, direccion, telefono, correo } = req.body;
+  const updateUser = {
+    nombre,
+    dni,
+    direccion,
+    telefono,
+    correo,
+  };
+
+  await pool.query("UPDATE usuarios SET ? WHERE id = ?", [updateUser][id]);
+  res.redirect("/tareas")
+};
 
 export const findUser = async (req, res) => {
   const { nombre } = req.body;
   await pool.query("SELECT from usuarios WHERE nombre = ?", [nombre]);
+};
+
+export const getpageUser = async (req, res) => {
+  res.render("addUsers");
+};
+
+export const getpageUpdate = async (req, res) => {
+  res.render("editUsers");
+  
 };

@@ -148,7 +148,7 @@ input {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  visibility: hidden;
+  
 }
 
 .card-title {

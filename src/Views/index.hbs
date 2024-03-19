@@ -1,46 +1,11 @@
 <div class="main-container">
-  <div class="create-card">
-
-    <div class="card-title">
-      <h1>Agregar Usuario</h1>
-    </div>
-    <div class="forms-container">
-      <form action="" method="post">
-        <label for="nombre">Nombre</label><input
-          name="nombre"
-          type="text"
-          placeholder="Nombre"
-        />
-
-        <label for="dni">DNI</label><input
-          name="dni"
-          type="text"
-          placeholder="DNI"
-        />
-
-        <label for="direccion">Direccion</label>
-        <input name="direccion" type="text" placeholder="Direccion" />
-
-        <label for="telefono">Telefono</label>
-        <input name="telefono" type="text" placeholder="Telefono" />
-
-        <label for="correo">Correo</label>
-        <input name="correo" type="text" placeholder="Correo" />
-
-        <button style="margin-top: 10px;">enviar</button>
-
-      </form>
-    </div>
-
-  </div>
-
   <div class="title-container">
     <h1>Lista de usuarios</h1>
   </div>
 
   <div class="nav-container">
     <nav class="hero-nav">
-      <button class="btn" onclick="showContainer()" id="crear">Crear usuario</button>
+      <a class="btn" href="/addUsers">Crear</a>
       <button class="btn">Buscar</button>
       <input type="text" placeholder="Ingresar DNI de usuario" />
     </nav>
@@ -62,7 +27,7 @@
         <p>{{telefono}}</p>
         <p>{{correo}}</p>
         <div class="action-btn-container">
-          <a class="btn" href="#">modify</a>
+          <a class="btn" href="/update/{{id}}">modify</a>
           <a class="btn" href="/delete/{{id}}">delete</a>
         </div>
       </div>
@@ -70,6 +35,5 @@
   </main>
 
   <script src="/javascript/control.js"></script>
-  
 
 </div>
