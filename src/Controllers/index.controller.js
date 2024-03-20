@@ -36,7 +36,7 @@ export const updateUser = async (req, res) => {
     correo,
   };
 
-  await pool.query("UPDATE usuarios SET ? WHERE id = ?", [updateUser][id]);
+  await pool.query("UPDATE usuarios SET ? WHERE id = ?", [updateUser,id]);
   res.redirect("/tareas")
 };
 
@@ -50,6 +50,9 @@ export const getpageUser = async (req, res) => {
 };
 
 export const getpageUpdate = async (req, res) => {
-  res.render("editUsers");
+  const {id} = req.params
+  var [rows] = await pool.query("SELECT * FROM usuarios WHERE id = ? ", [id]);
+ 
+  res.render("editUsers",{rows});
   
 };

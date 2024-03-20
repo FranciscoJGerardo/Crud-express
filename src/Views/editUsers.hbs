@@ -1,31 +1,50 @@
 <div class="create-card">
-    <div class="card-title">
-      <h1>Editar Usuario</h1>
-    </div>
-    <div class="forms-container">
+  <div class="card-title">
+    <h1>Editar Usuario</h1>
+  </div>
+  <div class="forms-container">
+    {{#rows}}
       <form action="" method="post">
         <label for="nombre">Nombre</label><input
           name="nombre"
           type="text"
-          placeholder="Nombre"
+          value="{{nombre}}"
+          placeholder="{{nombre}}"
         />
         <label for="dni">DNI</label><input
           name="dni"
           type="text"
-          placeholder="DNI"
+          value="{{dni}}"
+          placeholder="{{dni}}"
         />
         <label for="direccion">Direccion</label>
-        <input name="direccion" type="text" placeholder="Direccion" />
+        <input
+          name="direccion"
+          value="{{direccion}}"
+          type="text"
+          placeholder="{{direccion}}"
+        />
 
         <label for="telefono">Telefono</label>
-        <input name="telefono" type="text" placeholder="Telefono" />
+        <input
+          name="telefono"
+          type="text"
+          value="{{telefono}}"
+          placeholder="{{telefono}}"
+        />
 
         <label for="correo">Correo</label>
-        <input name="correo" type="text" placeholder="Correo" />
+        <input
+          name="correo"
+          type="text"
+          value="{{correo}}"
+          placeholder="{{correo}}"
+        />
 
         <button style="margin-top: 10px;">enviar</button>
 
       </form>
-    </div>
-
+    {{/rows}}
   </div>
+
+</div>
