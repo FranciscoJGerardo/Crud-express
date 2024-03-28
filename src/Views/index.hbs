@@ -6,8 +6,11 @@
   <div class="nav-container">
     <nav class="hero-nav">
       <a class="btn" href="/addUsers">Crear</a>
-      <button class="btn">Buscar</button>
-      <input type="text" placeholder="Ingresar DNI de usuario" />
+      <a class="btn" href="/searchUser/{{dni}}">Buscar</a>
+      <form action="/searchUser/{{dni}}" method="get">
+        <input name="dni" type="search" placeholder="Ingresar DNI de usuario" />
+        <input type="submit">
+      </form>
     </nav>
     <div class="title-descrp">
       <p>Nombre</p>

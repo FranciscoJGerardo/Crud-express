@@ -3,7 +3,6 @@ import { pool } from "../Connection/db.js";
 
 export const getPage = async (req, res) => {
   var [rows] = await pool.query("SELECT * FROM usuarios");
-  console.log(rows);
   res.render("index", { rows });
 };
 export const createUser = async (req, res) => {
@@ -36,8 +35,8 @@ export const updateUser = async (req, res) => {
     correo,
   };
 
-  await pool.query("UPDATE usuarios SET ? WHERE id = ?", [updateUser,id]);
-  res.redirect("/tareas")
+  await pool.query("UPDATE usuarios SET ? WHERE id = ?", [updateUser, id]);
+  res.redirect("/tareas");
 };
 
 export const findUser = async (req, res) => {
@@ -50,9 +49,14 @@ export const getpageUser = async (req, res) => {
 };
 
 export const getpageUpdate = async (req, res) => {
-  const {id} = req.params
+  const { id } = req.params;
   var [rows] = await pool.query("SELECT * FROM usuarios WHERE id = ? ", [id]);
- 
-  res.render("editUsers",{rows});
-  
+
+  res.render("editUsers", { rows });
+};
+export const searchUser = async (req, res) => {
+  const { dni } = req.params;
+  var [rows] = await pool.query("SELECT * FROM usuarios WHERE dni = ?", [dni]);
+  res.render("index", { rows });
+  console.log(dni);
 };

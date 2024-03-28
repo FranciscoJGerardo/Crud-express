@@ -171,9 +171,9 @@ input {
   align-items: center;
 }
 
-form {
+.forms {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-}
+} 
